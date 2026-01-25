@@ -187,6 +187,23 @@ button {
   color: var(--muted);
 }
 
+.hero-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero-metrics h4 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.hero-metrics p {
+  color: var(--muted);
+  margin: 0;
+}
+
 .hero-panel {
   background: var(--panel);
   border-radius: 24px;
@@ -257,6 +274,26 @@ button {
   font-size: 0.9rem;
 }
 
+.panel-list {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.panel-list > div {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+
+.panel-dot {
+  width: 10px;
+  height: 10px;
+  margin-top: 0.4rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #635bff, #9b9dff);
+}
+
 .progress {
   height: 6px;
   background: rgba(26, 76, 255, 0.12);
@@ -302,6 +339,57 @@ button {
   margin-top: 1rem;
   font-weight: 600;
   color: #a0a7b5;
+}
+
+.hero-company {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-company .eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.7rem;
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+.hero-company h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero-company p {
+  color: var(--muted);
+}
+
+.hero-company-card {
+  padding: 1.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 91, 255, 0.12);
+  background: #fff;
+  box-shadow: var(--shadow-soft);
+}
+
+.hero-company-card ul {
+  list-style: none;
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.hero-company-card li::before {
+  content: "•";
+  margin-right: 0.6rem;
+  color: var(--primary);
+}
+
+.hero-company-card li {
+  display: flex;
+  color: var(--muted);
 }
 
 main {
@@ -368,12 +456,49 @@ main {
   display: flex;
 }
 
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.services-grid div {
+  padding: 1.6rem;
+  border-radius: 18px;
+  border: 1px solid rgba(99, 91, 255, 0.1);
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.services-grid p {
+  color: var(--muted);
+}
+
 .overview-grid,
 .selection-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap: 1.5rem;
   margin-top: 2rem;
+}
+
+.company-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.company-pillars div {
+  padding: 1.6rem;
+  border-radius: 18px;
+  border: 1px solid rgba(99, 91, 255, 0.1);
+  background: #f7f8ff;
+}
+
+.company-pillars p {
+  color: var(--muted);
 }
 
 .overview-grid div,
@@ -395,6 +520,24 @@ main {
 .selection-grid p,
 .trust-grid p,
 .overview-grid p {
+  color: var(--muted);
+}
+
+.selection-note {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.selection-note div {
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(99, 91, 255, 0.1);
+  background: #f8f7ff;
+}
+
+.selection-note p {
   color: var(--muted);
 }
 
@@ -435,6 +578,25 @@ main {
 .waitlist p {
   color: var(--muted);
   max-width: 520px;
+}
+
+.access-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.access-details div {
+  padding: 1.5rem;
+  border-radius: 18px;
+  border: 1px solid rgba(99, 91, 255, 0.1);
+  background: #ffffff;
+  box-shadow: var(--shadow-soft);
+}
+
+.access-details p {
+  color: var(--muted);
 }
 
 .contact-form {
@@ -480,6 +642,31 @@ main {
   color: var(--muted);
 }
 
+.contact-callout {
+  margin-top: 2rem;
+  padding: 1.5rem 1.8rem;
+  border-radius: 20px;
+  border: 1px solid rgba(99, 91, 255, 0.12);
+  background: #f7f8ff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.contact-callout p {
+  color: var(--muted);
+}
+
+.ghost-link {
+  padding: 0.65rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(99, 91, 255, 0.4);
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
 footer {
   padding: 2.5rem 7vw 3rem;
   border-top: 1px solid var(--line);
@@ -522,6 +709,11 @@ footer {
   }
 
   .waitlist {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contact-callout {
     flex-direction: column;
     align-items: flex-start;
   }
